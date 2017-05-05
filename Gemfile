@@ -13,6 +13,9 @@ gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', '~> 2.0', require: false
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'
@@ -34,7 +37,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  gem 'mysql2', '~> 0.3.13'
+  # gem 'pg', '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
